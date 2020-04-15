@@ -1,4 +1,4 @@
-helloworld: helloworld.o
+all: helloworld.o
 	$(CC) $(LDFLAGS) helloworld.o -o helloworld
 
 helloworld.o: helloworld.c
@@ -7,3 +7,4 @@ helloworld.o: helloworld.c
 clean:
 	rm *.o helloworld
 
+install:
