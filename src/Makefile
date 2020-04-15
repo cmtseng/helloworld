@@ -1,3 +1,4 @@
+compile:
 all: helloworld.o
 	$(CC) $(LDFLAGS) helloworld.o -o helloworld
 
