@@ -1,4 +1,3 @@
-compile:
 all: helloworld.o
 	$(CC) $(LDFLAGS) helloworld.o -o helloworld
 
@@ -8,4 +7,4 @@ helloworld.o: helloworld.c
 clean:
 	rm *.o helloworld
 
-install:
+install: all
