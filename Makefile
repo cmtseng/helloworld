@@ -1,4 +1,6 @@
+
 include $(TOPDIR)/rules.mk
+
 PKG_NAME:=helloworld
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
@@ -8,6 +10,7 @@ PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
 
 include $(INCLUDE_DIR)/package.mk
+
 define Package/helloworld
 	SECTION:=utils
 	CATEGORY:=Utilities
