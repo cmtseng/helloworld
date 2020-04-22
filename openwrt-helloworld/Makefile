@@ -15,8 +15,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/$(PKG_NAME)
 	SECTION:=apps
 	CATEGORY:=Applications
-	TITLE:=The Hello World program
-	MAINTAINER:=Rodolfo Giometti <giometti@hce-engineering.com>
+	TITLE:=The Hello World program -- just test
 endef
 
 # Define package's description (long version)
