@@ -41,4 +41,4 @@ define Package/$(PKG_NAME)/install
 endef
 
 # The OpenWRT's main entry
-$(eval $(call BuildPackage,$(PKG_NAME)))
+# $(eval $(call BuildPackage,$(PKG_NAME)))
