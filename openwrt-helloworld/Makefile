@@ -5,7 +5,6 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=openwrt-helloworld
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -18,17 +17,12 @@ define Package/$(PKG_NAME)
 	TITLE:=The Hello World program -- just test
 endef
 
-# Define package's description (long version)
-define Package/$(PKG_NAME)/description
- This package holds a program that display the "hello world" message
-endef
-
 # Set up the build directory in order to be use by the compilation
 # stage.
 # Our data are not downloaded from a remote site by we have them
 # already into the "src" directory, so let's copy them accordingly
 define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
+	$(call Build/Prepare/Default)
 	$(CP) ./src/* $(PKG_BUILD_DIR)/
 endef
 
@@ -41,5 +35,3 @@ endef
 
 # The OpenWRT's main entry
 $(eval $(call BuildPackage,$(PKG_NAME)))
-
-
