@@ -11,7 +11,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/openwrt-helloworld
 	SECTION:=utils
 	CATEGORY:=Utilities
-	TITLE:=helloworld -- Just an example
+	TITLE:=openwrt-helloworld -- Just an example
 endef
 
 define Package/openwrt-helloworld/description
@@ -22,11 +22,6 @@ endef
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
 	$(CP) ./src/* $(PKG_BUILD_DIR)/
-endef
-
-define Package/openwrt-helloworld/install
-	$(INSTALL_DIR) $(1)/bin
-	$(INSTALL_BIN) helloworld $(1)/bin/
 endef
 
 $(eval $(call BuildPackage,openwrt-helloworld))
