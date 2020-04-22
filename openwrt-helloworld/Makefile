@@ -28,10 +28,10 @@ endef
 
 # Define the package's installation steps after the compilation
 # stage has done
-# define Package/$(PKG_NAME)/install
-# 	$(INSTALL_DIR) $(1)/usr/bin
-# 	$(CP) $(PKG_BUILD_DIR)/$(PKG_NAME) $(1)/usr/bin
-# endef
+define Package/$(PKG_NAME)/install
+ 	$(INSTALL_DIR) $(1)/usr/bin
+ 	$(CP) $(PKG_BUILD_DIR)/$(PKG_NAME) $(1)/usr/bin
+ endef
 
 # The OpenWRT's main entry
 $(eval $(call BuildPackage,$(PKG_NAME)))
