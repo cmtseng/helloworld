@@ -1,10 +1,6 @@
-all: helloworld.o
-	$(CC) $(LDFLAGS) helloworld.o -o helloworld
+TARGET = helloworld
 
-helloworld.o: helloworld.c
-	$(CC) $(CFLAGS) -c helloworld.c
+all: $(TARGET)
 
 clean:
 	rm *.o helloworld
-
-install: all
