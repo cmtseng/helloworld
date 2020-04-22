@@ -26,7 +26,7 @@ endef
 
 define Package/openwrt-helloworld/install
 	$(INSTALL_DIR) $(1)/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/helloworld $(1)/bin/
+	$(INSTALL_BIN) helloworld $(1)/bin/
 endef
 
 $(eval $(call BuildPackage,openwrt-helloworld))
