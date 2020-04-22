@@ -1,6 +1,7 @@
-TARGET = helloworld
+all: helloworld                                                                                                                   
 
-all: $(TARGET)
+helloworld: helloworld.c
+    $(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
 
 clean:
-	rm *.o helloworld
+    rm -f helloworld
