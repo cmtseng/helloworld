@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 # Define package's name, version, release and the default package's
 # build directory.
-PKG_NAME:=helloworld
+PKG_NAME:=openwrt-helloworld
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
@@ -32,7 +32,7 @@ define Build/Prepare
 	$(CP) ./src/* $(PKG_BUILD_DIR)/
 endef
 
-define Build/Compile
+define Package/$(PKG_NAME)/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR)
 endef
 
