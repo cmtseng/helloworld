@@ -11,11 +11,11 @@ define Package/$(PKG_NAME)
 	SECTION:=apps
 	CATEGORY:=Applications
 	TITLE:=The Hello World program
-	MAINTAINER:=Rodolfo Giometti <giometti@hce-engineering.com>
+	MAINTAINER:=cmtseng@gmail.com
 endef
 
 define Package/$(PKG_NAME)/description
- This package holds a program that display the "hello world" message
+	 This package holds a program that display the "hello world" message
 endef
 
 define Build/Prepare
