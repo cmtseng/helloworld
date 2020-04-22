@@ -1,7 +1,9 @@
-all: helloworld                                                                                                                   
+all: helloworld.o
+	$(CC) $(LDFLAGS) helloworld.o -o helloworld
 
-helloworld: helloworld.c
-    $(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
+helloworld.o: helloworld.c
+	$(CC) $(CFLAGS) -c helloworld.c
 
 clean:
-    rm -f helloworld
+	rm *.o helloworld
+
