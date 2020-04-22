@@ -32,10 +32,6 @@ define Build/Prepare
 	$(CP) ./src/* $(PKG_BUILD_DIR)/
 endef
 
-define Package/$(PKG_NAME)/Compile
-	$(MAKE) -C $(PKG_BUILD_DIR)
-endef
-
 # Define the package's installation steps after the compilation
 # stage has done
 define Package/$(PKG_NAME)/install
